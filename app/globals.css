@@ -199,8 +199,8 @@ main {
 
 .nav.nav-scrolled::before {
   opacity: 1;
-  background: rgba(29, 24, 22, 0.17);
-  backdrop-filter: blur(5px);
+  background: #1d18162b;
+  backdrop-filter: none;
 }
 
 .nav.nav-scrolled a,
@@ -214,6 +214,14 @@ main {
 .nav.nav-scrolled button:hover {
   color: #ffffff;
   opacity: 0.72;
+}
+
+.nav.site-header.site-header-transparent.nav-scrolled {
+  width: 100%;
+}
+
+header.main-header-sas.main-header-sas-transparent.nav-scrolled {
+  width: 100%;
 }
 
 .wordmark,
@@ -3058,11 +3066,11 @@ header.nav button:hover {
 }
 
 .nav {
-  left: 50%;
-  right: auto;
+  left: 0;
+  right: 0;
   top: var(--header-top);
-  width: min(calc(100% - (var(--header-outer-gap) * 2)), var(--header-shell-width));
-  transform: translateX(-50%);
+  width: 100%;
+  transform: none;
 }
 
 .nav.nav-scrolled {
@@ -6196,7 +6204,7 @@ header.nav button:hover {
 
 /* Shared site chrome modes */
 .site-header-solid.nav {
-  width: min(calc(100% - (var(--header-outer-gap) * 2)), var(--header-shell-width));
+  width: 100%;
   color: var(--clay);
   mix-blend-mode: normal;
   backdrop-filter: blur(5px);
@@ -6235,13 +6243,22 @@ a.wordmark.wordmark-icon {
   opacity: 0.72;
 }
 
+.site-header-solid.nav > nav a {
+  color: #000000;
+}
+
+.site-header-solid.nav > nav a:hover {
+  color: #000000;
+  opacity: 0.72;
+}
+
 .site-header-transparent.nav {
   position: fixed;
 }
 
 .main-header-sas {
   z-index: 10;
-  width: min(calc(100% - (var(--header-outer-gap) * 2)), var(--header-shell-width));
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   transition:
@@ -6255,8 +6272,9 @@ a.wordmark.wordmark-icon {
 .main-header-sas-transparent {
   position: fixed;
   top: var(--header-top);
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  transform: none;
 }
 
 .main-header-sas-solid {
@@ -6280,7 +6298,7 @@ a.wordmark.wordmark-icon {
   min-height: var(--header-height);
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  padding: 0 !important;
+  padding: 0 20px !important;
   transform: none;
 }
 
@@ -6289,7 +6307,7 @@ a.wordmark.wordmark-icon {
 }
 
 .main-header-sas > .site-header-solid.nav {
-  width: min(calc(100% - (var(--header-outer-gap) * 2)), var(--header-shell-width));
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
